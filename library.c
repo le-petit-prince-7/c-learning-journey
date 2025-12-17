@@ -1,46 +1,20 @@
-#include "library.h"
-
+#include <stdio.h>
 #include <stdio.h> // it is declaring functions as printf,scanf
 
-// Optional function - we will call it from main
-void print_greeting(void) {
-    printf("Hello there! Welcome to the program. \n\n"); // Print greeting with newline
-}
+// ========================================
+// WHY POINTERS ARE NEEDED IN FUNCTIONS
+// Explanation for complete beginners
+// ========================================
 
-int main() {
-    // First part: basic variables and printing
-    int age = 25;
-    float height = 1.75;
-    char letter = 'J';
-    double pi = 3.14159265;
+// Function: doubles the value of a number
+// Parameter: int *p = pointer to an integer
+// Why pointer? Because in C, function parameters are passed by value (copy)
+// Without pointer, the function would only change its own local copy
+// With pointer, we get the memory address → we can change the original variable
 
-    printf("Age: %d years\n", age); // \n new line, %d is used for int
-    printf("Height: %.2f m\n", height); // %2.f = 2 decimal number
-    printf("Letter: %c\n", letter); // %c is used for char
-    printf("pi number: %.11f\n", pi);
-
-   // Second part: fruit price calculation
-
-    int apples = 5; //Number of apples
-    int pears = 3; //Number of pears
-    float price_per_apple = 15.50; // Price per apple in CZK
-    float price_per_pears = 20.00; // Price per pears in CZK
-
-    //Calculate total price for each fruit
-
-    float total_apples = apples * price_per_apple;
-    float total_pears = pears * price_per_pears;
-
-    // Calculate overall total price
-    float total_price = total_apples + total_pears;
-
-    // Print results
-    printf("Apples: %d pcs, price per apple: %.2f CZK\n", apples, price_per_apple);
-    printf("Pears: %d pcs. price per pear: %.2f CZK\n", pears, price_per_pears);
-    printf("Total price for apples %.2f CZK\n", total_apples);
-    printf("Total price for pears: %.2f CZK\n", total_pears);
-    printf("---------------------------------\n");
-    printf("overall total: %.2f CZK\n", total_price);
-
-    return 0;
+void double_value(int *p) {     // p is a pointer - it holds a memory address
+    *p = *p * 2;                // *p = dereference = "value at the address p points to"
+                                // This line changes the original variable in main()
+    printf("Inside function: value at p = %d\n", p*);
+    // Note: we could also write printf("Doubled value: %d\n", *p);
 }
