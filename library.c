@@ -16,7 +16,7 @@ int main() {
     int size = 6;       // Array size
 
     // 2D array: fruit names (6 fruits, max 20 characters each)
-    char fruit_names[6][20] = {
+    char fruit_names[6][20] = {     // 6 fruits, each name max 19 chars
         "Apple",
         "Pear",
         "Banana",
@@ -36,23 +36,27 @@ int main() {
     }
 
     // Calculate total sum
-    int total_sum = O;
+    int total_sum = 0;
     for (int i = 0; i < size; i++) {
         total_sum += fruit_prices[i];
     }
 
     // Calculate avarage price
     float avarage = (float)total_sum / size;
+    // Cast total_sum to float to get decimal result in division
+    // Without cast: 110 / 6 = 18 (integer division, decimal part lost)
+    // With cast:     110.0 / 6 = 18.333...
+
 
     // Find maxium and minimum price
-    int max_price = fruit_prices[0];
-    int min_price = fruit_prices[0];
-    for (int i = 1; i < size; i++) {
-        if (fruit_prices[i] > max_price) {
-            max_price = fruit_prices[i];
+    int max_price = fruit_prices[0];        // Start assuming first price is highest
+    int min_price = fruit_prices[0];        // Start assuming first price is lowest
+    for (int i = 1; i < size; i++) {        // Loop through remaining elements
+        if (fruit_prices[i] > max_price) {      // If current price is higher than current max
+            max_price = fruit_prices[i];    // Found a new higher price → update
         }
-        if (fruit_prices[i] < min_price) {
-            min_price = fruit_prices[i];
+        if (fruit_prices[i] < min_price) {      // If current price is lower than current min
+            min_price = fruit_prices[i];        // Found a new lower price → update
         }
     }
 
