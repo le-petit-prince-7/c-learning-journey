@@ -20,4 +20,5 @@ printf("Value of a: %d\n", a);      // Output: 100
 // Print the memory address where a is stored
 // %p = format for printing pointers (addresses)
 // &a = address operator - gives the address of a
-printf()
+printf("Adress of a: %p\n", &a);    // Output: some hex number like 0x7fff...
+
