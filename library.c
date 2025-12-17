@@ -33,6 +33,14 @@ int main() {
     printf("Enter your first initial: ");
     scanf("%c", &initial); // Space before %c skips leftover newline
 
+    // --- Input fruit quantities ---
+    printf("\nNow lets calculate fruit price.\n");
+    printf("How many apples did you buy? ");
+    scanf("%d", &apples);
+
+    printf("How many pear did you buy? ");
+    scanf("%d", &pears);
+
 
 
     //Calculate total price for each fruit
