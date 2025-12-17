@@ -59,8 +59,13 @@ int main() {
     // Index:               0   1   2   3   4  5  - it is starting from 0 not 1
     int size= 6;    // Store array size for easier changes
 
-    // Print all prices with position 
+    // Print all prices with position
+    printf("All fruit prices:\n");
+    for (int i = 0; i < size; i++) {
+        printf("Fruit %d (index %d): %d CZK\n", i + 1, i, fruit_prices[i]);
+    }
 
+    
 
     return 0;
 }
