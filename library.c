@@ -63,5 +63,14 @@ int main() {
     printf("Most expensive fruit: %d CZK\n",max_price);
     printf("Cheapest fruit: %d CZK\n", min_price);
 
+    // Bonus: count fruits more expensive than 20 CZK
+    int expenive_count = 0;
+    for (int i = 0; i < size; i++) {
+        if (fruit_prices[i] > 20) {
+            expenive_count++;
+        }
+    }
+
+    printf("Number of fruits more expensive than 20 CZK: %d\n", expenive_count);
     return 0;
 }
