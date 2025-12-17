@@ -1,6 +1,6 @@
 #include "library.h"
 
-#include <stdio.h> // it is declaring functions as printf,scanf
+#include <stdio.h>  // it is declaring functions as printf,scanf
 
 // --- Loops demonstration ---
     printf("\n=== LOOPS DEMONSTRATION ===\n");
@@ -25,5 +25,26 @@
         printf(" Even: %d\n", i);
     }
 
+
+    // --- Example 3: Multiplication table for number 7 ---
+    int base_number = 7;        // The number we want to multiply
+    printf("\nMultiplication table for %d:\n", base_number);
+    for (int q = 1;             // Multiplier starts at 1
+         i <= 10;               // Go up to 10 (classic multiplication table)
+         i++)                   // Increase multiplier by 1
+    {
+        printf("%d x %d = %d\n", base_number, i, base_number * i);
+    }
+
+    // --- Example 4: while loop - repeat until valid age ---
+    // while is used when we don't know in advance how many times it will repeat
+    int user_age;
+    printf("\nEnter your age (must be between 1 and 12): ");
+    scanf("%d", &user_age);
+
+    // Keep asking while the age is invalid
+    while (user_age < 1 || user_age 120) { // || means "or"
+
+    }
 
     return 0;
