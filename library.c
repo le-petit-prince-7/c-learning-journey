@@ -42,10 +42,10 @@ int main() {
     scanf("%d", &user_age);
 
     // Keep asking while the age is invalid
-    while (user_age < 1 || user_age 120) {      // || means "or"
+    while (user_age < 1 || user_age > 120) {      // || means "or"
         printf("Invalid age! Please enter a number between 1 and 12.\n");
         printf("Try again: ");
-        printf("%d", user_age);
+        scanf("%d", user_age);
     }
 
     // This line runs only when the loop ends (age is valid)
