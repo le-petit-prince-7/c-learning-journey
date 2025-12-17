@@ -41,6 +41,8 @@ int main() {
         total_sum += fruit_prices[i];
     }
 
+    // Calculate avarage price
+    float avarage = (float)total_sum / size;
 
     
     return 0;
