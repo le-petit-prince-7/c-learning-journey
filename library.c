@@ -44,6 +44,18 @@ int main() {
     // Calculate avarage price
     float avarage = (float)total_sum / size;
 
+    // Find maxium and minimum price
+    int max_price = fruit_prices[0];
+    int min_price = fruit_prices[0];
+    for (int i = 1; i < size; i++) {
+        if (fruit_prices[i] > max_price) {
+            max_price = fruit_prices[i];
+        }
+        if (fruit_prices[i] < min_price) {
+            min_price = fruit_prices[i];
+        }
+    }
+
     
     return 0;
 }
