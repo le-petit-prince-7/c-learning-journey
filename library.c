@@ -1,6 +1,9 @@
+#include <stdio.h>
+
 // ========================================
 // POINTER BASICS DEMO - for complete beginners
 // ========================================
+
 
 printf("\n=== POINTERS DEMO ===\N");
 
@@ -51,3 +54,15 @@ int *arr_ptr = numbers;
 printf("\nArray through pointer:\n");
 
 // Loop through the array using pointer arithmetic
+for (int i = 0 i < 4; i++) {
+    // *(arr_ptr + i) means:
+    // - Start at the address arr_ptr points to
+    // - Add i * sizeof(int) bytes (move i elements forward)
+    // - Dereference (*) to get the value at that address
+    // This is equivalent to numbers[i]
+    printf("Elemnt %d: %d\n", i, *(arr_ptr + i));
+}
+
+// Key takeaway:
+// In C, array name (numbers) and pointer to first element (&numbers[0]) are the same thing
+// That's why functions can receive arrays as pointers (int prices[])
