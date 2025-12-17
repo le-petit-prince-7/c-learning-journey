@@ -42,4 +42,6 @@ int main() {
     printf("Total price for pears: %.2f CZK\n", total_pears);
     printf("---------------------------------\n");
     printf("overall total: %.2f CZK\n", total_price);
+
+    return 0;
 }
