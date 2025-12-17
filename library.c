@@ -78,3 +78,12 @@ int find_max_price(const int prices[], int size) {
 
 // Function: finds lowest price in array
 // Returns: the minimum value
+int find_min_price(const int prices[], int size) {
+    int min = prices[0];        // Start with first element
+    for (int i = 1; i < size; i++) {
+        if (prices[i] < min) {
+            min = prices[i];        // Update if current is lower
+        }
+    }
+    return min;
+}
