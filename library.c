@@ -74,7 +74,14 @@ int main() {
     printf("\nTotal sum: %d CZK\n", sum);
     printf("Avarage price: %.2f CZK\n", avarage);
 
-    
+    //Find the maximum price
+    int max_price = fruit_prices[0];    // Start with first element
+    for (int i = 1; i < size; i++) {
+        if (fruit_prices[i] > max_price) {
+            max_price = fruit_prices[i];
+        }
+    }
+printf("Most expensive fruit: %d CZK\n", max_price);
 
     return 0;
 }
