@@ -3,8 +3,8 @@
 #include <stdio.h> // it is declaring functions as printf,scanf
 
 // Optional function - we will call it from main
-void hello(void) {
-    printf("Hello there! \n"); // Print greeting with newline
+void print_greeting(void) {
+    printf("Hello there! Welcome to the program. \n\n"); // Print greeting with newline
 }
 
 int main() {
