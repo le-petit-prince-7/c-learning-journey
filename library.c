@@ -1,5 +1,3 @@
-#include "library.h"
-
 #include <stdio.h>  // it is declaring functions as printf,scanf
 
 int main() {
