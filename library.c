@@ -32,4 +32,22 @@ printf("Value pointed by ptr: %d\n", &ptr);     // Output 100 - same as a.auto
 // Since ptr points to a, this changes the value of a
 *ptr = 200;     // Change value through pointer
 
+// Now a has been changed, even though we didn't write a = 200 directly
+printf("New value of a: %d\n", a);         // Output: 200
 
+
+// ========================================
+// ARRAY AND POINTER RELATIONSHIP
+// In C, array name is automatically a pointer to its first element
+// ========================================
+int numbers[4] = {10, 20, 30, 40};
+// numbers = pointer to the first element (numbers[0])
+// numbers is the same as &numbers[0]
+
+// Create a pointer that points to the beginning of the array
+// No & needed - array name already acts as a pointer
+int *arr_ptr = numbers;
+
+printf("\nArray through pointer:\n");
+
+// Loop through the array using pointer arithmetic
