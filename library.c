@@ -7,12 +7,12 @@ void hello(void) {
 }
 
 int main() {
-    int age =25;
-    float height =1.75;
+    int age = 25;
+    float height = 1.75;
     char letter = 'J';
     double pi = 3.14159265;
 
-    printf("Age: %d\n let\n", age);
+    printf("Age: %d years\n", age);
     printf("Height: %.2f m\n", height);
     printf("Letter: %c\n", letter);
     printf("pi number: %.11f\n", pi);
