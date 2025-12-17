@@ -59,4 +59,22 @@ int calculate_sum(const int prices[], int size) {
 // Function: calculates average from already calculated sum
 // Why separate? Reusability and clarity
 
-float calculate_avarage(int)
+float calculate_avarage(int sum, int size) {
+    return (float)sum/size;     // Cast to float for decimal result
+}
+
+// Function: finds highest price in array
+// Returns: the maximum value
+
+int find_max_price(const int prices[], int size) {
+    int max = prices[0];        // Start with first element
+    for (int i = 1; i < size; i++) {
+        if (prices[i] > max) {
+            max = prices[i];    // Update if current is higher
+        }
+    }
+    return max;
+}
+
+// Function: finds lowest price in array
+// Returns: the minimum value
