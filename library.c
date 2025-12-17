@@ -59,9 +59,8 @@ int main() {
     printf("---------------\n");
     printf("Total amount:              %.2f CZK\n", total_price);
 
-
-
-
-
+    // Final message
+    printf("\nThank you, %c! Have a great day!\n", initial);
+    
     return 0;
 }
