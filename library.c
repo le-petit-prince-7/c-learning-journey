@@ -15,8 +15,19 @@ int main() {
     int fruit_prices[6] = {15, 20, 12, 30, 9, 25};
     int size = 6;       // Array size
 
-    
+    // 2D array: fruit names (6 fruits, max 20 characters each)
+    char fruit_names[6][20] = {
+        "Apple",
+        "Pear",
+        "Banana",
+        "Oranga",
+        "Strawberry",
+        "Kiwi"
+    };
 
+
+    // Print complete list with names and prices
+    
 
     return 0;
 }
