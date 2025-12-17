@@ -2,11 +2,13 @@
 
 #include <stdio.h> // it is declaring functions as printf,scanf
 
+// Optional function - we will call it from main
 void hello(void) {
-    printf("Hello there! \n"); //printf is used for printing the text
+    printf("Hello there! \n"); // Print greeting with newline
 }
 
 int main() {
+    // First part: basic variables and printing
     int age = 25;
     float height = 1.75;
     char letter = 'J';
@@ -17,11 +19,8 @@ int main() {
     printf("Letter: %c\n", letter); // %c is used for char
     printf("pi number: %.11f\n", pi);
 
-    return 0;
-}
+   // Second part: fruit price calculation
 
-int main() {
-    //Decůare variables for fruits
     int apples = 5; //Number of apples
     int pears = 3; //Number of pears
     float price_per_apple = 15.50; // Price per apple in CZK
@@ -37,7 +36,7 @@ int main() {
 
     // Print results
     printf("Apples: %d pcs, price per apple: %.2f CZK\n", apples, price_per_apple);
-    printf("Pears: %d pcs. price per pear: %2.f CZK\n", pears, price_per_pears);
+    printf("Pears: %d pcs. price per pear: %.2f CZK\n", pears, price_per_pears);
     printf("Total price for apples %.2f CZK\n", total_apples);
     printf("Total price for pears: %.2f CZK\n", total_pears);
     printf("---------------------------------\n");
