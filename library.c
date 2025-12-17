@@ -18,5 +18,28 @@ int main() {
     printf("pi number: %.11f\n", pi);
 
     return 0;
+}
 
+int main() {
+    //Decůare variables for fruits
+    int apples = 5; //Number of apples
+    int pears = 3; //Number of pears
+    float price_per_apple = 15.50; // Price per apple in CZK
+    float price_per_pears = 20.00; // Price per pears in CZK
+
+    //Calculate total price for each fruit
+
+    float total_apples = apples * price_per_apple;
+    float total_pears = pears * price_per_pears;
+
+    // Calculate overall total price
+    float total_price = total_apples + total_pears;
+
+    // Print results
+    printf("Apples: %d pcs, price per apple: %.2f CZK\n", apples, price_per_apple);
+    printf("Pears: %d pcs. price per pear: %2.f CZK\n", pears, price_per_pears);
+    printf("Total price for apples %.2f CZK\n", total_apples);
+    printf("Total price for pears: %.2f CZK\n", total_pears);
+    printf("---------------------------------\n");
+    printf("overall total: %.2f CZK\n", total_price);
 }
