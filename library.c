@@ -2,7 +2,8 @@
 
 #include <stdio.h>  // it is declaring functions as printf,scanf
 
-// --- Loops demonstration ---
+int main() {
+    // --- Loops demonstration ---
     printf("\n=== LOOPS DEMONSTRATION ===\n");
 
     // --- Example 1: for loop - counting from 1 to 10 ---
@@ -11,8 +12,8 @@
     for (int i = 1;     // 1. Start: create variable i and set it to 1 (runs only once)
          i <=10;        // 2. Condition: continue as long as i is less than or equal to 10
          i++)           // 3. After each loop: increase i by 1 (i++ means i = i + 1)
-        {
-            printf(" Number: %d\n", i);  // Body of the loop - this runs 10 times
+    {
+        printf(" Number: %d\n", i);  // Body of the loop - this runs 10 times
     }
     // When i becomes 11, condition i <= 10 is false → loop ends
 
@@ -22,7 +23,7 @@
          c <= 20;       // Continue while i <= 20
          c += 2)        // Increase i by 2 each time (skip odd numbers)
     {
-        printf(" Even: %d\n", i);
+        printf(" Even: %d\n", c);
     }
 
 
@@ -30,10 +31,10 @@
     int base_number = 7;        // The number we want to multiply
     printf("\nMultiplication table for %d:\n", base_number);
     for (int q = 1;             // Multiplier starts at 1
-         i <= 10;               // Go up to 10 (classic multiplication table)
-         i++)                   // Increase multiplier by 1
+         q <= 10;               // Go up to 10 (classic multiplication table)
+         q++)                   // Increase multiplier by 1
     {
-        printf("%d x %d = %d\n", base_number, i, base_number * i);
+        printf("%d x %d = %d\n", base_number, q, base_number * q);
     }
 
     // --- Example 4: while loop - repeat until valid age ---
@@ -44,12 +45,13 @@
 
     // Keep asking while the age is invalid
     while (user_age < 1 || user_age 120) {      // || means "or"
-     printf("Invalid age! Please enter a number between 1 and 12.\n");
-     printf("Try again: ");
-     printf("%d", user_age);
+        printf("Invalid age! Please enter a number between 1 and 12.\n");
+        printf("Try again: ");
+        printf("%d", user_age);
     }
 
     // This line runs only when the loop ends (age is valid)
     printf("Valid age entered: %d years. Thank you!\n", user_age);
 
     return 0;
+}
