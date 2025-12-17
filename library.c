@@ -30,3 +30,6 @@ printf("Value pointed by ptr: %d\n", &ptr);     // Output 100 - same as a.auto
 // Change the value THROUGH the pointer
 // *ptr = 200 means: put 200 into the memory location that ptr points to
 // Since ptr points to a, this changes the value of a
+*ptr = 200;     // Change value through pointer
+
+
