@@ -13,18 +13,11 @@ int main() {
     float height;
     char initial;
 
-
-    printf("Age: %d years\n", age); // \n new line, %d is used for int
-    printf("Height: %.2f m\n", height); // %2.f = 2 decimal number
-    printf("Letter: %c\n", letter); // %c is used for char
-    printf("pi number: %.11f\n", pi);
-
-   // Second part: fruit price calculation
-
-    int apples = 5; //Number of apples
-    int pears = 3; //Number of pears
-    float price_per_apple = 15.50; // Price per apple in CZK
-    float price_per_pears = 20.00; // Price per pears in CZK
+    // Variables for fruit shopping
+    int apples;
+    int pears;
+    float price_per_apple; // Price per apple in CZK
+    float price_per_pears; // Price per pear in CZK
 
     //Calculate total price for each fruit
 
