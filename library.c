@@ -27,7 +27,13 @@ int main() {
 
 
     // Print complete list with names and prices
-    
+    printf("\nComplete fruit list:\n");
+    for (int i = 0; i < size; i++) {
+        // i + 1 = human-readable position (1 to 6)
+        // fruit_names[i] = name at index i
+        // fruit_prices[i] = price at same index
+        printf("%d. %s: %d CZK\n", i, fruit_names[i], fruit_prices[i]);
+    }
 
     return 0;
 }
