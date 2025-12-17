@@ -19,6 +19,22 @@ int main() {
     float price_per_apple; // Price per apple in CZK
     float price_per_pears; // Price per pear in CZK
 
+    // Greetign
+
+    print_greeting();
+
+    // --- Input personal data from user ----
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter you height: ");
+    scanf("%f", &height);
+
+    printf("Enter your first initial: ");
+    scanf("%c", &initial); // Space before %c skips leftover newline
+
+
+
     //Calculate total price for each fruit
 
     float total_apples = apples * price_per_apple;
