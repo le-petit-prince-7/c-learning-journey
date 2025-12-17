@@ -65,6 +65,15 @@ int main() {
         printf("Fruit %d (index %d): %d CZK\n", i + 1, i, fruit_prices[i]);
     }
 
+    // Calculate sum and avarage
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += fruit_prices[i];     // Add current price to total sum
+    }
+    float avarage = (float)sum / size; // Cast to float for decimal places
+    printf("\nTotal sum: %d CZK\n", sum);
+    printf("Avarage price: %.2f CZK\n", avarage);
+
     
 
     return 0;
