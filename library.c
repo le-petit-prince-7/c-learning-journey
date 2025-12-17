@@ -14,5 +14,16 @@
         {
             printf(" Number: %d\n", i);  // Body of the loop - this runs 10 times
     }
+    // When i becomes 11, condition i <= 10 is false → loop ends
+
+    // --- Example 2: for loop - even numbers from 2 to 20 ---
+    printf("\nEven numbers from 2 to 20:\n");
+    for (int c = 2;     // Start at 2
+         c <= 20;       // Continue while i <= 20
+         c += 2)        // Increase i by 2 each time (skip odd numbers)
+    {
+        printf(" Even: %d\n", i);
+    }
+
 
     return 0;
