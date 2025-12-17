@@ -52,6 +52,12 @@ int main() {
     printf("Height: %.2f m\n", height);
     printf("Initial: %c\n", initial);
 
+    // --- Output shopping receipt ---
+    printf("\n--- Shopping receipt ---\n");
+    printf("Apples: %d pcs x %.2f CZK = %.2f CZK\n", apples, price_per_apple, total_apples);
+    printf("Pears: %d pcs x %.2f CZK = %.2f CZK\n", pears, price_per_pears, total_pears);
+    printf("---------------\n");
+    printf("Total amount:              %.2f CZK\n", total_price);
 
 
 
