@@ -83,5 +83,9 @@ int main() {
     }
 printf("Most expensive fruit: %d CZK\n", max_price);
 
+    // Character array = string in C
+    char name[20] = "Prince";       // Automatically ends with /0
+    printf("\nName from char array: %s\n", name);
+
     return 0;
 }
