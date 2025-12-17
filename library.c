@@ -38,7 +38,7 @@ int main() {
     // --- Example 4: while loop - repeat until valid age ---
     // while is used when we don't know in advance how many times it will repeat
     int user_age;
-    printf("\nEnter your age (must be between 1 and 12): ");
+    printf("\nEnter your age (must be between 1 and 120): ");
     scanf("%d", &user_age);
 
     // Keep asking while the age is invalid
@@ -70,7 +70,7 @@ int main() {
 
         i++)                // Step 3:Increment index to access the next element in the array
         {
-                            
+
         printf("Fruit %d (index %d): %d CZK\n", i + 1, i, fruit_prices[i]);
     }
 
