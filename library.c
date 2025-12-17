@@ -35,3 +35,28 @@ int main() {
 
     return 0;
 }
+
+// Function: prints numbered list of fruits with prices
+// Parameters: names and prices arrays, size of arrays
+// Why const? Arrays are not modified inside this function
+void print_fruit_list(const char[] [20], const int prices[],int size) {
+    printf("\nFruit List:\n");
+    for (int i = 0; i < size; i++) {
+        printf("%d. %s: %d CZK\n", i + 1, names[i],prices[i])
+    }
+}
+
+// Function: calculates sum of all prices in array
+// Returns: integer sum
+int calculate_sum(const int prices[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += prices[i];       // Add each price to sum
+    }
+    return sum;     // Return the result to caller
+}
+
+// Function: calculates average from already calculated sum
+// Why separate? Reusability and clarity
+
+float calculate_avarage(int)
