@@ -41,23 +41,15 @@ int main() {
     printf("How many pear did you buy? ");
     scanf("%d", &pears);
 
-
-
-    //Calculate total price for each fruit
-
+    // --- Calculations ---
     float total_apples = apples * price_per_apple;
     float total_pears = pears * price_per_pears;
-
-    // Calculate overall total price
     float total_price = total_apples + total_pears;
 
-    // Print results
-    printf("Apples: %d pcs, price per apple: %.2f CZK\n", apples, price_per_apple);
-    printf("Pears: %d pcs. price per pear: %.2f CZK\n", pears, price_per_pears);
-    printf("Total price for apples %.2f CZK\n", total_apples);
-    printf("Total price for pears: %.2f CZK\n", total_pears);
-    printf("---------------------------------\n");
-    printf("overall total: %.2f CZK\n", total_price);
+
+
+
+  
 
     return 0;
 }
