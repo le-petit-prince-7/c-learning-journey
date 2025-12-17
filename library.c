@@ -35,5 +35,13 @@ int main() {
         printf("%d. %s: %d CZK\n", i, fruit_names[i], fruit_prices[i]);
     }
 
+    // Calculate total sum
+    int total_sum = O;
+    for (int i = 0; i < size; i++) {
+        total_sum += fruit_prices[i];
+    }
+
+
+    
     return 0;
 }
