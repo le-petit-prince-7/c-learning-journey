@@ -51,6 +51,7 @@ int main() {
     // This line runs only when the loop ends (age is valid)
     printf("Valid age entered: %d years. Thank you!\n", user_age);
 
+
     // --- Example 5: Array + loop example ---
     printf("\n=== ARRAYS AND LOOPS ===\n");
 
@@ -61,7 +62,15 @@ int main() {
 
     // Print all prices with position
     printf("All fruit prices:\n");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0;         // Step 1: Create counter variable i and set it to 0 (we start at 0 because array indexes begin at 0).
+
+        i < size;           // Step 2: Condition – keep looping while i is less than size.
+                            // When i reaches size (e.g. 6), condition is false → loop ends.
+                            // So we safely access indices 0 to 5 (for size = 6).
+
+        i++)                // Step 3:Increment index to access the next element in the array
+        {
+                            
         printf("Fruit %d (index %d): %d CZK\n", i + 1, i, fruit_prices[i]);
     }
 
