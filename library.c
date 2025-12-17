@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdio.h> // it is declaring functions as printf,scanf
 
 // ========================================
@@ -15,7 +14,7 @@
 void double_value(int *p) {     // p is a pointer - it holds a memory address
     *p = *p * 2;                // *p = dereference = "value at the address p points to"
                                 // This line changes the original variable in main()
-    printf("Inside function: value at p = %d\n", p*);
+    printf("Inside function: value at p = %d\n", *p);
     // Note: we could also write printf("Doubled value: %d\n", *p);
 }
 
