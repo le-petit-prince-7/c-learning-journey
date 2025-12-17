@@ -56,6 +56,12 @@ int main() {
         }
     }
 
-    
+    // Final summary
+    printf("\n--- Summary ---\n");
+    printf("Total sum of all fruits: %d CZK\n",total_sum);
+    printf("Avarage price: %.2f CZK\n", avarage);
+    printf("Most expensive fruit: %d CZK\n",max_price);
+    printf("Cheapest fruit: %d CZK\n", min_price);
+
     return 0;
 }
