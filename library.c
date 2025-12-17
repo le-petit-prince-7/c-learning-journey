@@ -16,8 +16,8 @@ int main() {
     // Variables for fruit shopping
     int apples;
     int pears;
-    float price_per_apple; // Price per apple in CZK
-    float price_per_pears; // Price per pear in CZK
+    float price_per_apple = 15.50; // Price per apple in CZK
+    float price_per_pears = 20.00; // Price per pear in CZK
 
     // Greetign
 
@@ -61,6 +61,6 @@ int main() {
 
     // Final message
     printf("\nThank you, %c! Have a great day!\n", initial);
-    
+
     return 0;
 }
