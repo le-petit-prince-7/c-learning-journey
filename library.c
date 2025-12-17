@@ -51,5 +51,16 @@ int main() {
     // This line runs only when the loop ends (age is valid)
     printf("Valid age entered: %d years. Thank you!\n", user_age);
 
+    // --- Example 5: Array + loop example ---
+    printf("\n=== ARRAYS AND LOOPS ===\n");
+
+    // Array of 6 fruit prices in CZK
+    int fruit_prices[6] = {15, 20, 12, 30, 8, 25};
+    // Index:               0   1   2   3   4  5  - it is starting from 0 not 1
+    int size= 6;    // Store array size for easier changes
+
+    // Print all prices with position 
+
+
     return 0;
 }
