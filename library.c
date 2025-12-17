@@ -46,10 +46,16 @@ int main() {
     float total_pears = pears * price_per_pears;
     float total_price = total_apples + total_pears;
 
+    // --- Output personal data ---
+    printf("\n--- Your personal data ---\n");
+    printf("Age: %d years\n", age);
+    printf("Height: %.2f m\n", height);
+    printf("Initial: %c\n", initial);
 
 
 
-  
+
+
 
     return 0;
 }
