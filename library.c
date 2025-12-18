@@ -21,5 +21,12 @@ int main() {
         return 1;       // Exit program with error
     }
 
+    // Fill the array with values from user
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &dyn_array[i]);     // Use like normal array
+    }
+
+    // Print the array
     
 }
