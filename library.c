@@ -12,3 +12,17 @@ struct Fruit {
     struct Fruit* next;     // Pointer to the next fruit in the list
                             // NULL = this is the last fruit
 };
+
+// ========================================
+// MAIN FUNCTION - program starts here
+// ========================================
+int main() {
+    struct Fruit *head  = NULL;     //// Pointer to first fruit - list is empty at start
+
+    // Create first fruit (Apple)
+    struct Fruit *apple = malloc(sizeof(struct Fruit));
+    if (apple == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+}
