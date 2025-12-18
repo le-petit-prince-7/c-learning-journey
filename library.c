@@ -28,5 +28,15 @@ int main() {
     }
 
     // Print the array
-    
+    printf("You entered:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d\n", dyn_array[i]);
+    }
+    printf("\n");
+
+    // Always free the memory when done
+    // free(dyn_array) = release the allocated memory back to the system
+    // After free, don't use dyn_array anymore!
+    free(dyn_array);
+    return 0;
 }
