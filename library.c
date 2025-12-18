@@ -37,5 +37,18 @@ int main() {
     banana->next = NULL;
 
     apple->next = banana;       // apples next field now points to banana
-    
+
+    // Print the list using pointer to struct
+    printf("=== FRUIT LIST USING POINTERS TO STRUCT ===\n");
+    struct Fruit *current = head;       // current = pointer that walks through the list
+    while (current != NULL) {
+        // Use -> to access fields through pointer
+        printf("%s\n", current->name);
+        printf(" Price: %d CZK\n", current->price);
+        printf(" Quantity: %d\n", current->quantity);
+        printf(" Total: %d CZK\n", current->price * current->quantity);
+        printf(" ---\n");
+
+        current = current->next;        // Move pointer to next fruit
+    }
 }
