@@ -40,6 +40,8 @@ int main() {
     printf("\na & b = %d (binary: 00000001)\n", and_result);
     printf("Use: check if certain bits are set (e.g. permission checks)\n");
 
-    //
-
+    // 2. OR (|) - at least one bit must be 1
+    unsigned char or_result = a | b;        // 00000101 | 00000011 = 00000111 = 7
+    printf("\na | b = %d (binary: 00000111)\n", or_result);
+    printf("Use: set multiple flags at once\n");
 }
