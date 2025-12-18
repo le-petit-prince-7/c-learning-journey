@@ -68,6 +68,13 @@ int main() {
         current = current->next;        // Move to next fruit
     }
 
-    
+    // Calculate total value of all fruits
+    int grand_total = 0;
+    current = head;
+    while (current != NULL) {
+        grand_total += current->price * current->quantity;
+        current = current->next;
+    }
+    printf("Grand total for all fruits: %d CZK\n", grand_total);
 
 }
