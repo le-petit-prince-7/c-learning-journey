@@ -28,4 +28,17 @@ int main() {
     second->data = 20;
     second->next = NULL;
     first->next = second;       // First node now point to second
+
+    // Create third node and link it
+    struct Node *third = malloc(sizeof(struct Node));
+    if (third == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    third->data = 30;
+    third->next = NULL;
+    second->next = third;       // Second node now points to third
+
+    
+
 }
