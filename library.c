@@ -16,4 +16,16 @@ int main() {
         return 1;
     }
     first->data = 10;       // Put value 10 into the node
+    first->next = NULL;     // No next node yet
+    head = first;           // Head now points to this node
+
+    // Create second node and link it
+    struct Node *second = malloc(sizeof(struct Node));
+    if (second == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    second->data = 20;
+    second->next = NULL;
+    first->next = second;       // First node now point to second
 }
