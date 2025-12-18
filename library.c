@@ -13,4 +13,13 @@ int main() {
     // malloc(n * sizeof(int)) = allocate memory for n integers
     // sizeof(int) = size of one int in bytes (usually 4)
     // malloc returns pointer to the memory, or NULL if failed
+    int *dyn_array = malloc(n * sizeof(int));
+
+    // Always check if malloc succeeded
+    if (dyn_array == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;       // Exit program with error
+    }
+
+    
 }
