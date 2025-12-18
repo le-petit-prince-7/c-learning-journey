@@ -30,5 +30,14 @@ int main() {
     printf("Which Fibonacci number do you want? (0-40 recommended): ");
     scanf("%d", &position);
 
+    // Safety check - recursion gets very slow for large n
+    if (position < 0) {
+        printf("Please enter a non-negative number!\n");
+        return 1;
+    }
+    if (position > 40) {
+        printf("Warning: Numbers above 40 are very slow with recursion!\n");
+    }
+
     
 }
