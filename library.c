@@ -56,7 +56,11 @@ int main() {
     printf("Use: bit masks, inverting flags\n");
 
     // 5. Left shift (<<) - multiply by powers of 2
-    
+    unsigned char left_shift = a << 2;       // 00000101 << 2 = 00010100 = 20
+    printf("\na << 2 = %d (binary: 00010100)\n", left_shift);
+    printf(" Use: fast multiplication by 2^n, setting high bits\n");
+
+    // 6. Right shift (>>) - divide by powers of 2
 
 
 }
