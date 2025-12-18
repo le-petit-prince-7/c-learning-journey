@@ -24,3 +24,11 @@ unsigned long long fibonacci(int n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+int main() {
+    int position;
+
+    printf("Which Fibonacci number do you want? (0-40 recommended): ");
+    scanf("%d", &position);
+
+    
+}
