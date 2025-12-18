@@ -55,6 +55,15 @@ int main() {
     banana->next = NULL
     pear->next = banana;        // Pear now points to banana
 
-    
+    // Print the entire shopping list
+    printf("=== MY FRUIT SHOPPING LIST ===\n");
+    struct Fruit *current = head;       // Start from first fruit
+    while (current != NULL) {           // Continue until end of the list
+        printf("%s\n", current->name);
+        printf(" Price per piece: %d CZK\n", current->price);
+        printf(" Quantity: %d\n", current->quantity);
+        printf(" total value: %d CZK\n", current->price *current->quantity);
+        printf(" ---\n");
+    }
 
 }
