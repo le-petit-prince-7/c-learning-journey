@@ -30,4 +30,12 @@ int main() {
         printf("Memory allocation failed!\n");
         return 1;
     }
+
+    strcpy(banana->name, "Banana");
+    banana->price = 15;
+    banana->quantity = 200;
+    banana->next = NULL;
+
+    apple->next = banana;       // apples next field now points to banana
+    
 }
