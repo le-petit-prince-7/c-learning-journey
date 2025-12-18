@@ -64,6 +64,10 @@ int main() {
         printf(" Quantity: %d\n", current->quantity);
         printf(" total value: %d CZK\n", current->price *current->quantity);
         printf(" ---\n");
+
+        current = current->next;        // Move to next fruit
     }
+
+    
 
 }
