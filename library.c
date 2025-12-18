@@ -73,3 +73,18 @@ void add_fruit(struct Fruit **head, const char *name, int price, int quantity) {
     new_fruit->next = *head;            // New fruit points to old head
     *head = new_fruit;                  // Head now points to new fruit
 }
+
+// Print all fruits in the list
+void print_list(struct Fruit *head) {
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Fruit* current = head;
+    while (current != NULL) {
+        printf("%s - %d = %d CZK total\n",
+            current->name, current->price, current->quantity,
+            current->price *current->quantity);
+        current = current->next;
+    }
+}
