@@ -25,4 +25,11 @@ int main() {
         printf("Memory allocation failed\n");
         return 1;
     }
+    strcpy(apple->name, "Apple");       // Copy string safely
+    apple->price = 15;
+    apple->quantity = 5;
+    apple->next = NULL;     // No next fruit yet
+    head = apple;           // Head points to an apple
+
+
 }
