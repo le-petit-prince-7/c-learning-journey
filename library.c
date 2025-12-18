@@ -82,7 +82,10 @@ int main() {
 
     printf("Permissions value: %d\n", permissions);
 
-    
+    // Check if read permission is set
+    if (permissions == FLAG_READ) {
+        printf("Read permission: YES\n");
+    }
 
 
 }
