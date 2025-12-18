@@ -40,6 +40,18 @@ int main() {
         return 1;
     }
 
-    // 
+    // Buffer for reading ne line at a time
+    char line[100];     //Max 99 characters + \0
+
+    printf("\nContents of fruit_list.txt\n");
+
+    // fgets reads one line (up to newline or buffer size)
+    // Returns NULL when end of file is reached
+    while (fgets(line, sizeof(line), file) != NULL) {
+        printf("%s", line);         // %s prints the string, no need for & because line is array
+    }
+
+    fclose(file);  // Close file again
+    return 0;
 
 }
