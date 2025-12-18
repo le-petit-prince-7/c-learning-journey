@@ -46,7 +46,18 @@ int main() {
         printf("%d -> ", current->data);
         current = current->next;        // Move to next node
     }
+    printf("NULL\n");       // End of list
 
-    
+    // Free all allocated memory (very important!)
+    // We must free each node to avoid memory leak
+
+    current = head;
+    while (current != NULL) {
+        struct Node *temp = current;        // Remeber current node
+        current = current -> next;          // Move to next
+        free(temp);                         // Free the remembered node
+    }
+
+    return 0;
 
 }
