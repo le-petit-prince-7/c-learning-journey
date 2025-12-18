@@ -88,3 +88,19 @@ void print_list(struct Fruit *head) {
         current = current->next;
     }
 }
+
+// Save entire list to text file (one fruit per line: name,price,quantity)
+void save_to_file(struct Fruit *head, const char *filename) {
+    FILE *file = fopen(filename, "w");      // "w" = write mode (overwrite)
+    if (file == NULL) {
+        printf("Error opening file for writing\n");
+        return;
+    }
+
+    struct Fruit* current = head;
+    while (current != NULL) {
+        fprintf(file, "%s,%d,%d\n", current->name, current->price, current->quantity);
+        current = current->next;
+    }
+    fclose(file);
+}
