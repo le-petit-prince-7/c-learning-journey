@@ -44,4 +44,13 @@ int main() {
     unsigned char or_result = a | b;        // 00000101 | 00000011 = 00000111 = 7
     printf("\na | b = %d (binary: 00000111)\n", or_result);
     printf("Use: set multiple flags at once\n");
+
+    // 3. XOR (^) - bits different → 1
+    unsigned char xor_result = a ^ b;       // 00000101 ^ 00000011 = 00000110 = 6
+    printf("\na ^ b = %d (binary: 00000110)\n", xor_result);
+    printf("Use: simple encryption, toggling bits\n");
+
+    
+
+
 }
