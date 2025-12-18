@@ -75,7 +75,14 @@ int main() {
     #define FLAG_WRITE   2       // binary 00000010
     #define FLAG_EXECUTE 4       // binary 00000100
 
-    unsigned char permission = 0;   // Start with no permissions
+    unsigned char permissions = 0;   // Start with no permissions
+
+    // Grant read and execute permissions
+    permissions = FLAG_READ | FLAG_EXECUTE;     // 00000001 | 00000100 = 00000101 = 5
+
+    printf("Permissions value: %d\n", permissions);
+
+    
 
 
 }
