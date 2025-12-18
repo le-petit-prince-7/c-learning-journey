@@ -82,7 +82,7 @@ void print_list(struct Fruit *head) {
     }
     struct Fruit* current = head;
     while (current != NULL) {
-        printf("%s - %d = %d CZK total\n",
+        printf("%s - %d CZK x %d = %d CZK total\n",
             current->name, current->price, current->quantity,
             current->price *current->quantity);
         current = current->next;
@@ -109,7 +109,7 @@ void save_to_file(struct Fruit *head, const char *filename) {
 struct Fruit* load_from_file(const char *filename) {
     FILE *file = fopen(filename, "r");      // "r" = read mode
     if (file == NULL) {
-        print_list("Error opening file for reading(file may not exist).\n");
+        printf("Error opening file for reading(file may not exist).\n");
         return NULL;
     }
 
@@ -118,7 +118,7 @@ struct Fruit* load_from_file(const char *filename) {
     char name[20];
     int price, quantity;
 
-    while (fgets(line, sizeof(line), file));
+    while (fgets(line, sizeof(line), file)) {
         // Parse line: name, price, quantity
         if (sscanf(line, "%19[^,],%d,%d", name, &price, &quantity) == 3) {
             add_fruit(&head, name, price, quantity);
@@ -129,7 +129,7 @@ struct Fruit* load_from_file(const char *filename) {
     return head;
  }
 
-// Free al nodes to prevent memory leak
+// Free all nodes to prevent memory leak
 void free_list(struct Fruit *head) {
     struct Fruit* current = head;
     while (current != NULL) {
