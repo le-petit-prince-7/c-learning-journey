@@ -18,5 +18,11 @@ int main() {
         return 1;
     }
 
+    // Write lines to file - fprint is like printf, but to file
+    fprintf(file, "Apple - 15 CZK\n");
+    fprintf(file, "Pear - 20 CZK\n");
+    fprintf(file, "Banana - 90 CZK\n");
+    fprintf(file, "Orange - 30 CZK\n");
+
     
 }
