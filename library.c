@@ -49,5 +49,9 @@ int main() {
     } else {
         print_list(shopping_list);
     }
-    
+
+    // Clean up
+    free_list(shopping_list);
+
+    return 0;
 }
