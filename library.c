@@ -33,4 +33,8 @@ int main() {
     print_list(shopping_list);
 
     // Save to file
+    save_to_file(shopping_list, "my_fruit_list.txt");
+    printf("\nList saved to 'my_fruit_list.txt'\n");
+
+    
 }
