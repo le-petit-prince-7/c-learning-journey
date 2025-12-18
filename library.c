@@ -16,4 +16,18 @@ int main() {
     }
 
     // Fill the fields using -> operat (arrow)
+    // -> "go to the address this pointer points to, then access the field"
+    strcpy(apple->name, "Apple");
+    apple->price = 15;
+    apple->quantity = 5;
+    apple->next = NULL;     // NO next fruit yet
+
+    head = apple;           // Head now points to apple
+
+    // Create second fruit and link it
+    struct Fruit *banana = malloc(sizeof(struct Fruit));
+    if (banana == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
 }
