@@ -77,4 +77,12 @@ int main() {
     }
     printf("Grand total for all fruits: %d CZK\n", grand_total);
 
+    // Free all allocated memory - prevent memory leak
+    current = head;
+    while (current != NULL) {
+        struct Fruit *temp = current;       // Remember current node
+        current = current->next;            // Move to next
+        free(temp);                         // Free the remembered node
+    }
+    return 0;
 }
