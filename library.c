@@ -72,3 +72,48 @@ int main() {
     }
     return 0;
 }
+
+/*
+ * POINTERS TO STRUCTURES - FULL EXPLANATION FOR COMPLETE BEGINNERS
+ * (So you understand everything even if you open this file in 14 days or later)
+ *
+ * What does this program do?
+ * This program creates a simple linked list of fruits using structures and pointers to structures.
+ * It shows how to:
+ *   - Define a struct with a pointer to the same type (self-referential struct)
+ *   - Use malloc to create nodes dynamically
+ *   - Access struct fields through pointers using the -> operator
+ *   - Link nodes together to form a chain
+ *   - Traverse the chain and print data
+ *   - Free all allocated memory
+ *
+ * Why is this important in real programming?
+ * Pointers to structures are the foundation of dynamic data structures in C.
+ * Almost every non-trivial C program uses them.
+ *
+ * Real-world uses:
+ *   - Game development: linked list of game objects (enemies, bullets, items)
+ *   - Operating systems: process list, file descriptors, memory management
+ *   - Databases: in-memory indexes, B-trees
+ *   - Network programming: packet queues
+ *   - Embedded systems: device lists, sensor data chains
+ *   - Any program that needs flexible, growable lists of complex objects
+ *
+ * Key concepts explained:
+ *   - struct Fruit *next = pointer to another Fruit struct
+ *     → this is what makes the "link" in linked list
+ *   - -> operator = "arrow" = shortcut for (*pointer).field
+ *     → used when you have a pointer to a struct
+ *     Example: current->name is same as (*current).name
+ *   - head = pointer to first fruit (entrance to the whole list)
+ *   - current = temporary pointer we move along the list to visit each fruit
+ *
+ * Analogy for beginners:
+ *   - Each fruit = a box with name, price, quantity, and a sticky note saying "next box is..."
+ *   - head = the address of the first box
+ *   - current = your hand pointing to the current box while you walk through the row
+ *   - When you reach a box with "next box = none" (NULL) → end of list
+ *
+ * This pattern (struct with data + pointer to same struct) is used in millions of real programs.
+ * Mastering it means you can build complex, dynamic data structures like trees, graphs, queues.
+ */
