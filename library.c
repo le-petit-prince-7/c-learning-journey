@@ -55,3 +55,21 @@ int main() {
 
     return 0;
 }
+
+// ========================================
+// FUNCTIONS IMPLEMENTATION
+// ========================================
+
+// Add new fruit to the beginning of the list
+void add_fruit(struct Fruit **head, const char *name, int price, int quantity) {
+    struct Fruit *new_fruit = malloc(sizeof(struct Fruit));
+    if (new_fruit == NULL) {
+        printf("Memory allocation failed\n");
+        return;
+    }
+    strcpy(new_fruit->name, name);
+    new_fruit->price = price;
+    new_fruit->quantity = quantity;
+    new_fruit->next = *head;            // New fruit points to old head
+    *head = new_fruit;                  // Head now points to new fruit
+}
