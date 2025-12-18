@@ -36,5 +36,9 @@ int main() {
     save_to_file(shopping_list, "my_fruit_list.txt");
     printf("\nList saved to 'my_fruit_list.txt'\n");
 
+    // Free current list
+    free_list(shopping_list);
+    shopping_list = NULL;
+
     
 }
