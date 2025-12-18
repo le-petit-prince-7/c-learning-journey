@@ -26,7 +26,7 @@ int main() {
 
     // Always close the file when done
     fclose(file);
-    printf("Data successfully written to fruit_lust.txt\n");
+    printf("Data successfully written to fruit_list.txt\n");
 
     // ========================================
     // 2. READING FROM A FILE
