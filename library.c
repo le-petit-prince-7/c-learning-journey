@@ -40,5 +40,14 @@ int main() {
     free_list(shopping_list);
     shopping_list = NULL;
 
+    // Load from file
+    printf("\n=== LOADING FROM FILE ===\n");
+    shopping_list = load_from_file("my_fruit_list.txt");
+
+    if (shopping_list == NULL) {
+        printf(" No data loaded (file empty or error)\n");
+    } else {
+        print_list(shopping_list);
+    }
     
 }
