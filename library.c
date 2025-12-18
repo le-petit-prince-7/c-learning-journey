@@ -4,7 +4,15 @@
 // ========================================
 // STRUCTURE DEFINITION - blueprint for one node
 // ========================================
+struct Node {
+    int data;               // The value we want to store (cargo in the wagon)
+    struct Node *next;      // Pointer to the next node (coupler to next wagon)
+    // NULL = no next wagon (end of list)
+};
 
+// ========================================
+// MAIN FUNCTION
+// ========================================
 int main() {
     struct Node *head = NULL;    // Head pointer - points to first node
                                 // NULL = list is empty at start
