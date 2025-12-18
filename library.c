@@ -24,5 +24,22 @@ int main() {
     fprintf(file, "Banana - 90 CZK\n");
     fprintf(file, "Orange - 30 CZK\n");
 
-    
+    // Always close the file when done
+    fclose(file);
+    printf("Data successfully written to fruit_lust.txt\n");
+
+    // ========================================
+    // 2. READING FROM A FILE
+    // ========================================
+    // "r" = read mode
+
+    file = fopen("fruit_list.txt", "r");
+
+    if (file == NULL) {
+        printf("Error: Could not open file for reading!\n");
+        return 1;
+    }
+
+    // 
+
 }
