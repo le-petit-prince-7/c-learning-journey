@@ -39,6 +39,14 @@ int main() {
     third->next = NULL;
     second->next = third;       // Second node now points to third
 
+    // Print te entire list
+    printf("Linked list contents\n");
+    struct Node *current = head;        // Start from the beginning
+    while (current != NULL) {           // Continue until we reach the end (NULL)
+        printf("%d -> ", current->data);
+        current = current->next;        // Move to next node
+    }
+
     
 
 }
