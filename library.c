@@ -10,7 +10,7 @@ struct Fruit {
     int price;          // Price per piece in CZK
     int quantity;       // How many we have
     struct Fruit *next; // POINTER TO NEXT FRUIT (this is pointer to struct!)
-}
+};
 
 // ========================================
 // MAIN FUNCTION
