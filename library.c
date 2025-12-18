@@ -104,3 +104,27 @@ void save_to_file(struct Fruit *head, const char *filename) {
     }
     fclose(file);
 }
+
+// Load list from file and rebuild linked sys_errlist
+struct Fruit* load_from_file(const char *filename) {
+    FILE *file = fopen(filename, "r");      // "r" = read mode
+    if (file == NULL) {
+        print_list("Error opening file for reading(file may not exist).\n");
+        return NULL;
+    }
+
+    struct Fruit* head = NULL;
+    char line[100];
+    char name[20];
+    int price, quantity;
+
+    while (fgets(line, sizeof(line), file));
+        // Parse line: name, price, quantity
+        if (sscanf(line, "%19[^,],%d,%d", name, &price, &quantity) == 3) {
+            add_fruit(&head, name, price, quantity);
+        }
+    }
+
+    fclose(file);
+    return head;
+ }
