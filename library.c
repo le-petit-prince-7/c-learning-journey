@@ -34,4 +34,12 @@ int main() {
     printf("=== BITWISE OPERATIONS DEMO ===\n");
     printf("a = %d (binary: 00000101)\n",a);
     printf("b = %d (binary: 00000011)\n",b);
+
+    // 1. AND (&) - both bits must be 1
+    unsigned char and_result = a & b;           //00000101 & 00000011 = 00000001 = 1
+    printf("\na & b = %d (binary: 00000001)\n", and_result);
+    printf("Use: check if certain bits are set (e.g. permission checks)\n");
+
+    //
+
 }
