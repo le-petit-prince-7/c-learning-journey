@@ -105,7 +105,7 @@ void save_to_file(struct Fruit *head, const char *filename) {
     fclose(file);
 }
 
-// Load list from file and rebuild linked sys_errlist
+// Load list from file and rebuild linked list
 struct Fruit* load_from_file(const char *filename) {
     FILE *file = fopen(filename, "r");      // "r" = read mode
     if (file == NULL) {
@@ -128,3 +128,13 @@ struct Fruit* load_from_file(const char *filename) {
     fclose(file);
     return head;
  }
+
+// Free al nodes to prevent memory leak
+void free_list(struct Fruit *head) {
+    struct Fruit* current = head;
+    while (current != NULL) {
+        struct Fruit *temp = current;
+        current = current->next;
+        free(temp);
+    }
+}
