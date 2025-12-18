@@ -83,13 +83,25 @@ int main() {
     printf("Permissions value: %d\n", permissions);
 
     // Check if read permission is set
-    if (permissions == FLAG_READ) {
+    if (permissions & FLAG_READ) {
         printf("Read permission: YES\n");
+    }
+
+    // Check write permission
+    if (permissions & FLAG_WRITE) {
+        printf("Write permission: YES\n");
+    } else {
+        printf("Write permission: NO\n");
     }
 
     // Add write permission
     permissions |= FLAG_WRITE;      // OR with write flag
     printf("After adding write: %d\n", permissions);
+
+    // Check write again
+    if (permissions |= FLAG_WRITE) {
+        printf("Write permission: YES (after adding)\n");
+    }
 
     // Remove read permission
     permissions &= ~FLAG_READ;      // AND with inverted read flag
