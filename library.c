@@ -26,3 +26,12 @@
  *   - Cybersecurity: analyzing binary files, exploits, reverse engineering
  */
 
+int main() {
+    // Lets use 8-bit examples for clarity
+    unsigned char a = 5;        // Binary: 00000101
+    unsigned char b = 3;        // Binary: 00000011
+
+    printf("=== BITWISE OPERATIONS DEMO ===\n");
+    printf("a = %d (binary: 00000101)\n",a);
+    printf("b = %d (binary: 00000011)\n",b);
+}
