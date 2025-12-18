@@ -31,5 +31,18 @@ int main() {
     apple->next = NULL;     // No next fruit yet
     head = apple;           // Head points to an apple
 
+    // Create second fruit (Pear) and link it
+    struct Fruit *pear = malloc(sizeof(struct Fruit));
+    if (pear == NULL) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+    strcpy(pear->name, "Pear");
+    pear->price = 20;
+    pear->quantity = 12
+    pear->next = NULL
+    apple->next = pear;     // Apple now points to pear
+
+    // Create third fruit (Banana) and link it
 
 }
