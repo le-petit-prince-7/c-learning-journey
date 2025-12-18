@@ -29,7 +29,7 @@ int main() {
     add_fruit(&shopping_list, "Banana", 12, 10);
     add_fruit(&shopping_list, "Orange", 30, 3);
 
-    printf("=== CURRENT SHOPPING LIST===\n");
+    printf("=== CURRENT SHOPPING LIST ===\n");
     print_list(shopping_list);
 
     // Save to file
@@ -138,3 +138,22 @@ void free_list(struct Fruit *head) {
         free(temp);
     }
 }
+
+/*
+* FULL PROGRAM EXPLANATION - LIKE A TEXTBOOK FOR COMPLETE BEGINNERS
+*
+* This comment explains EVERYTHING in the code in detail – what it does, how it works, why it's there, and the output.
+* Read it like a textbook: from top to bottom. It's written so even if you open this file in 14 days (or a year), or if you're a total beginner, you'll understand every word, line, and concept.
+* We'll use simple words, analogies (like a shopping list or chain of friends), and step-by-step breakdowns.
+*
+* ========================================
+* WHAT IS THE PROGRAM'S PURPOSE?
+* ========================================
+* This program creates a dynamic shopping list of fruits using a linked list (a chain of items).
+* Each fruit is a "struct" (custom data type) with name, price, quantity.
+* It does 4 main things:
+*   1. Add fruits to the list (manually in code)
+*   2. Print the list with total values
+*   3. Save the list to a text file (persistent storage – data survives program end)
+*   4. Load the list back from the file and print it again
+*
