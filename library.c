@@ -23,4 +23,14 @@ void free_list(struct Fruit* head);
 
 int main() {
     struct Fruit* shopping_list = NULL;     // Start with empty list
+
+    // Add some fruits manually
+    add_fruit(&shopping_list, "Apple", 15, 5);
+    add_fruit(&shopping_list, "Banana", 12, 10);
+    add_fruit(&shopping_list, "Orange", 30, 3);
+
+    printf("=== CURRENT SHOPPING LIST===\n");
+    print_list(shopping_list);
+
+    // Save to file
 }
