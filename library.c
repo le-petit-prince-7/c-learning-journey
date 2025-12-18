@@ -65,5 +65,17 @@ int main() {
     printf("\na >> 1 = %d (binary: 00000010)\n", right_shift);
     printf("Use: fast division by 2^n, extracting bits\n");
 
+    // ========================================
+    // PRACTICAL EXAMPLE: FLAGS (very common in real code)
+    // ========================================
+    printf("\n=== PRACTICAL EXAMPLE: BIT FLAGS ===\n");
+
+    // Define flags as powers of 2 (each bit represents one option)
+    #define FLAG_READ    1       // binary 00000001
+    #define FLAG_WRITE   2       // binary 00000010
+    #define FLAG_EXECUTE 4       // binary 00000100
+
+    unsigned char permission = 0;   // Start with no permissions
+
 
 }
