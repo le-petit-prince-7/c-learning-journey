@@ -51,4 +51,13 @@ int main() {
 
         current = current->next;        // Move pointer to next fruit
     }
+
+    // Free memory
+    current = head;
+    while (current != NULL) {
+        struct Fruit *temp = current;
+        current = current->next;
+        free(temp);
+    }
+    return 0;
 }
