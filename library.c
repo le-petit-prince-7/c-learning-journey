@@ -157,3 +157,103 @@ void free_list(struct Fruit *head) {
 *   3. Save the list to a text file (persistent storage – data survives program end)
 *   4. Load the list back from the file and print it again
 *
+* Why is this useful?
+*   - Real programs need to save/load data (e.g., shopping app, game save, database)
+*   - Linked list allows unlimited items (add as many as you want at runtime)
+*   - Struct groups related info (name + price + quantity = one "fruit object")
+*
+ * ========================================
+ * EXPECTED OUTPUT (what you see when running the program)
+ * ========================================
+ * The output changes based on your fruits, but here's what happens for the code's default fruits (Apple 15/5, Banana 12/10, Orange 30/3):
+ *
+ * === CURRENT SHOPPING LIST ===
+ * Apple - 15 CZK x 5 = 75 CZK total
+ * Banana - 12 CZK x 10 = 120 CZK total
+ * Orange - 30 CZK x 3 = 90 CZK total
+ *
+ * List saved to 'my_fruit_list.txt'
+ *
+ * === LOADING FROM FILE ===
+ * Apple - 15 CZK x 5 = 75 CZK total
+ * Banana - 12 CZK x 10 = 120 CZK total
+ * Orange - 30 CZK x 3 = 90 CZK total
+ *
+ * Explanation of output:
+ *   - First part: prints the list we created in memory
+ *   - Saves to file (creates "my_fruit_list.txt" on your disk with "Apple,15,5\nBanana,12,10\nOrange,30,3\n")
+ *   - Frees memory and loads back from file
+ *   - Prints the loaded list (same as first, proving it saved/loaded correctly)
+ *   - If file empty or missing: "No data loaded"
+ *
+ * ========================================
+ * NEW CONCEPTS EXPLAINED LIKE A TEXTBOOK FOR ABSOLUTE BEGINNERS
+ * ========================================
+ * We'll explain EVERY new thing, word by word, with analogies.
+ * Assume you're new to programming – we'll start from zero.
+ *
+ * 1. struct Fruit { ... }
+ *    - "struct" = structure = custom data type you create
+ *    - Like a box that holds multiple things together
+ *    - Analogy: A fruit basket with slots for name, price, quantity, and a chain to next basket
+ *    - char name[20] = slot for text (name), max 19 letters + special end mark '\0'
+ *    - int price = slot for whole number (price)
+ *    - int quantity = slot for another whole number (how many)
+ *    - struct Fruit *next = slot for address (pointer) to another fruit basket
+ *      * = this is a pointer (arrow to memory location)
+ *      next = name of the field
+ *      Why? To connect fruits into a chain (linked list)
+ *
+ * 2. Function prototypes (e.g. void add_fruit(struct Fruit **head, ...))
+ *    - Prototypes = "preview" or "menu" of functions
+ *    - Tell compiler: "These functions exist below, so let me call them now"
+ *    - Without prototypes, compiler complains if you call function before defining it
+ *    - void = function returns nothing (no value back)
+ *    - struct Fruit **head = pointer to pointer (double *) – allows changing the head inside function
+ *      ** = pointer to pointer (like arrow to arrow – needed to modify original head)
+ *    - const char *name = pointer to string (name won't be changed inside function)
+ *    - int price, int quantity = normal integer parameters
+ *
+ * 3. add_fruit function
+ *    - Adds new fruit to the start of the list
+ *    - malloc(sizeof(struct Fruit)) = ask system for memory to hold one fruit
+ *      malloc = memory allocate = "give me a block of memory"
+ *      sizeof = calculate how many bytes the struct needs
+ *    - strcpy = safe copy string from name to new_fruit->name
+ *      Why strcpy? You can't do new_fruit->name = name (arrays need copying)
+ *    - new_fruit->next = *head = link new fruit to old first fruit
+ *    - *head = new_fruit = update head to point to new fruit (now first in list)
+ *
+ * 4. print_list function
+ *    - Walks through the list and prints each fruit
+ *    - if (head == NULL) = check if list is empty
+ *    - while (current != NULL) = loop until end of list
+ *    - printf with calculation = show name, price x quantity = total
+ *    - current = current->next = move to next fruit
+ *
+ * 5. save_to_file function
+ *    - Opens file in "w" mode (write/overwrite)
+ *    - Loops through list
+ *    - fprintf = like printf, but writes to file instead of screen
+ *    - "%s,%d,%d\n" = format: name,comma,price,comma,quantity,newline
+ *    - fclose = close file (important – frees resources)
+ *
+ * 6. load_from_file function
+ *    - Opens file in "r" mode (read)
+ *    - fgets = read one line from file into buffer line
+ *    - sscanf = parse (extract) from line: name up to comma, then int, then int
+ *      %19[^,] = read max 19 chars until comma
+ *      == 3 = check if parsed exactly 3 items
+ *    - add_fruit = add parsed fruit to list
+ *
+ * 7. free_list function
+ *    - Frees all memory allocated by malloc
+ *    - Loop through list
+ *    - temp = remember current
+ *    - Move to next
+ *    - free(temp) = return memory to system
+ *    - Why? Prevent memory leak (program using more and more memory over time)
+ *
+ * This program combines structs, linked lists, pointers, malloc/free, and file I/O
+ * – all core C concepts for real-world apps like shopping carts, databases, games.
+ */
