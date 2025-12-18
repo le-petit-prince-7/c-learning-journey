@@ -91,5 +91,9 @@ int main() {
     permissions |= FLAG_WRITE;      // OR with write flag
     printf("After adding write: %d\n", permissions);
 
+    // Remove read permission
+    permissions &= ~FLAG_READ;      // AND with inverted read flag
+    printf("After removing read: %d\n", permissions);
 
+    return 0;
 }
