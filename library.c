@@ -87,5 +87,9 @@ int main() {
         printf("Read permission: YES\n");
     }
 
+    // Add write permission
+    permissions |= FLAG_WRITE;      // OR with write flag
+    printf("After adding write: %d\n", permissions);
+
 
 }
