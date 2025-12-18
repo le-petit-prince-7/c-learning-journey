@@ -1,46 +1,28 @@
-#include "library.h"
+#include <stdio.h>
 
-#include <stdio.h> // it is declaring functions as printf,scanf
+/*
+ * BITWISE OPERATIONS - FULL EXPLANATION FOR COMPLETE BEGINNERS
+ *
+ * What are bits?
+ * Every number in computer is stored as bits (0 or 1).
+ * Example: decimal 5 in binary = 00000101 (8 bits)
+ * Bit positions from right: 0,1,2,3,4,5,6,7 (value 1,2,4,8,16,32,64,128)
+ *
+ * Bitwise operators work on individual bits:
+ *   &  AND    → 1 only if both bits are 1
+ *   |  OR     → 1 if at least one bit is 1
+ *   ^  XOR    → 1 if bits are different
+ *   ~  NOT    → flips all bits (0→1, 1→0)
+ *   << Left shift  → move bits left (multiply by 2 each time)
+ *   >> Right shift → move bits right (divide by 2 each time)
+ *
+ * Real-world uses:
+ *   - Flags/settings: pack many yes/no options into one integer
+ *   - Hardware control: turn on/off LEDs, motors, sensors
+ *   - Network protocols: packet headers (TCP flags)
+ *   - Graphics/games: color masks, bitmaps
+ *   - Cryptography: encryption algorithms
+ *   - Optimization: faster than if/else for some checks
+ *   - Cybersecurity: analyzing binary files, exploits, reverse engineering
+ */
 
-// Optional function - we will call it from main
-void print_greeting(void) {
-    printf("Hello there! Welcome to the program. \n\n"); // Print greeting with newline
-}
-
-int main() {
-    // First part: basic variables and printing
-    int age = 25;
-    float height = 1.75;
-    char letter = 'J';
-    double pi = 3.14159265;
-
-    printf("Age: %d years\n", age); // \n new line, %d is used for int
-    printf("Height: %.2f m\n", height); // %2.f = 2 decimal number
-    printf("Letter: %c\n", letter); // %c is used for char
-    printf("pi number: %.11f\n", pi);
-
-   // Second part: fruit price calculation
-
-    int apples = 5; //Number of apples
-    int pears = 3; //Number of pears
-    float price_per_apple = 15.50; // Price per apple in CZK
-    float price_per_pears = 20.00; // Price per pears in CZK
-
-    //Calculate total price for each fruit
-
-    float total_apples = apples * price_per_apple;
-    float total_pears = pears * price_per_pears;
-
-    // Calculate overall total price
-    float total_price = total_apples + total_pears;
-
-    // Print results
-    printf("Apples: %d pcs, price per apple: %.2f CZK\n", apples, price_per_apple);
-    printf("Pears: %d pcs. price per pear: %.2f CZK\n", pears, price_per_pears);
-    printf("Total price for apples %.2f CZK\n", total_apples);
-    printf("Total price for pears: %.2f CZK\n", total_pears);
-    printf("---------------------------------\n");
-    printf("overall total: %.2f CZK\n", total_price);
-
-    return 0;
-}
