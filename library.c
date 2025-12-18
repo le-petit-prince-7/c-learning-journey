@@ -61,6 +61,9 @@ int main() {
     printf(" Use: fast multiplication by 2^n, setting high bits\n");
 
     // 6. Right shift (>>) - divide by powers of 2
+    unsigned char right_shift = a >> 1;     //00000101 >> 1 = 00000010 = 2
+    printf("\na >> 1 = %d (binary: 00000010)\n", right_shift);
+    printf("Use: fast division by 2^n, extracting bits\n");
 
 
 }
