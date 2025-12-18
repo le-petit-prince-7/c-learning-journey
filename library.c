@@ -13,6 +13,7 @@ struct Node {
 // ========================================
 // MAIN FUNCTION
 // ========================================
+
 int main() {
     struct Node *head = NULL;    // Head pointer - points to first node
                                 // NULL = list is empty at start
@@ -69,3 +70,41 @@ int main() {
     return 0;
 
 }
+
+/*
+ * LINKED LIST - COMPLETE BEGINNER EXPLANATION WITH TRAIN ANALOGY
+ *
+ * What is this code for?
+ * This program creates a simple singly linked list with three nodes containing values 10, 20, and 30.
+ * It demonstrates how to:
+ *   - Define a node structure
+ *   - Dynamically allocate memory for each node using malloc
+ *   - Link nodes together
+ *   - Traverse (walk through) the list to print values
+ *   - Free all allocated memory to prevent memory leaks
+ *
+ * Train (wagon) analogy - easy way to understand linked list:
+ * Imagine a train made of wagons:
+ *   - Each wagon = one node in the list
+ *   - Cargo inside the wagon = the data (here: integer values 10, 20, 30)
+ *   - Coupler connecting wagons = the 'next' pointer
+ *   - First wagon = pointed by 'head'
+ *   - Last wagon has no coupler to anything = next = NULL (end of train)
+ *
+ * Why use linked list instead of array?
+ *   - Size can grow/shrink at runtime (add/remove wagons easily)
+ *   - No need to know final size in advance
+ *   - Insertion/deletion in middle is fast (just change couplers/pointers)
+ *   - Trade-off: slower random access than arrays
+ *
+ * Key concepts used:
+ *   - struct Node = custom type combining data and pointer to next node
+ *   - malloc = creates new wagon (node) on the heap
+ *   - -> operator = access field of structure through pointer
+ *   - head = pointer to first wagon (start of train)
+ *   - current = temporary pointer we move along the train to print or free
+ *   - free = destroy wagon and give memory back to system
+ *
+ * This is a fundamental data structure used in real programs for lists, queues, stacks, etc.
+ * Mastering linked lists is a big step toward intermediate C programming!
+ */
