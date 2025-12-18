@@ -50,6 +50,12 @@ int main() {
     printf("\na ^ b = %d (binary: 00000110)\n", xor_result);
     printf("Use: simple encryption, toggling bits\n");
 
+    // 4. NOT (~) - flip all bits
+    unsigned char not_a = ~a;           //// ~00000101 = 11111010 = 250 (in 8-bit)
+    printf("\n~a       = %d (binary: 11111010)\n", not_a);
+    printf("Use: bit masks, inverting flags\n");
+
+    // 5. Left shift (<<) - multiply by powers of 2
     
 
 
