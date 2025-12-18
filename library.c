@@ -5,6 +5,17 @@
 // ========================================
 // STRUCTURE DEFINITION - one fruit item
 // ========================================
+struct Fruit {
+    char name[20];      // Name of the fruit
+    int price;          // Price per piece in CZK
+    int quantity;       // How many we have
+    struct Fruit *next; // POINTER TO NEXT FRUIT (this is pointer to struct!)
+}
+
+// ========================================
+// MAIN FUNCTION
+// ========================================
+
 int main() {
     struct Fruit *head = NULL;  // Pointer to first fruit - list starts empty
 
